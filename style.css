@@ -343,22 +343,22 @@ body {
 
 .firstbody {
   background-color: #f5f6f8;
-  height: auto; /* Changed to auto for flexibility */
-  padding: 20px 0; /* Added padding for spacing */
+  height: auto;
+  padding: 20px 0;
 }
 
 .firstbody p {
-  text-align: center; /* Center-align text */
+  text-align: center;
   padding-top: 20px;
-  font-size: 1.2em; /* Adjusted font size for better readability */
+  font-size: 1.2em;
 }
 
 .firstbody .firstbodyimage {
   display: flex;
-  flex-wrap: wrap; /* Wrap images on smaller screens */
-  justify-content: center; /* Center images horizontally */
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  gap: 10px; /* Added gap between images */
+  gap: 10px;
   padding: 20px 0;
 }
 
@@ -1460,10 +1460,9 @@ body {
   .seventhpagebody {
     padding: 0 20px;
   }
-  .seventhpagebox1,
-  .seventhpagebox2 {
-    width: 80%;
-    max-width: 600px;
+  .carousel {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 }
 
@@ -1478,64 +1477,28 @@ body {
   .seventhpagebody p:nth-child(2) {
     font-size: 12px;
   }
-  .seventhpagebox1,
-  .seventhpagebox2 {
-    width: 90%;
-    max-width: 500px;
-    height: auto;
-  }
-  .seventhpagebodybox {
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 @media (max-width: 480px) {
-  .seventhpagebodyimage {
-    display: none;
-  }
   .seventhpagebody p:nth-child(1) {
     font-size: 30px;
     line-height: 36px;
   }
-  .seventhpagebodybox {
-    display: flex;
-    flex-direction: column;
-  }
-  .seventhpagebodybox1image {
-    width: auto;
-    height: auto;
-  }
   .seventhpagebody p:nth-child(2) {
     font-size: 10px;
   }
-  .seventhpagebox1,
-  .seventhpagebox2 {
-    width: 100%;
-    height: auto;
-  }
-  .seventhpagebodybox1bg,
-  .seventhpagebodybox2bg {
-    width: 40px;
-    height: 40px;
-  }
-  .seventhpagebox11 p:nth-child(2),
-  .seventhpagebox22 p:nth-child(2) {
-    font-size: 16px;
-    line-height: 24px;
-  }
-  .seventhpagebox11 p:nth-child(3),
-  .seventhpagebox22 p:nth-child(3) {
-    font-size: 14px;
-    line-height: 20px;
+  .carousel {
+    display: grid;
+    grid-template-columns: 1fr;
+    flex-wrap: wrap;
   }
 }
 
 .seventhpage {
-  height: 635px;
   width: 100%;
   padding-top: 150px;
 }
+
 .seventhpagebody {
   display: flex;
   flex-direction: row;
@@ -1543,21 +1506,47 @@ body {
 }
 
 .seventhpagebody p:nth-child(1) {
-  width: 426px;
-  height: 66px;
   font-size: 71px;
   font-weight: 800;
   line-height: 66px;
-  letter-spacing: -0.03em;
 }
 
 .seventhpagebody p:nth-child(2) {
   font-size: 16px;
   font-weight: 400;
   line-height: 29px;
-  letter-spacing: -0.02em;
-  width: 570px;
-  height: 58px;
+}
+
+.carousel {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  padding-top: 40px;
+  gap: 50px;
+}
+
+.carousel1,
+.carousel2 {
+  border: 1px solid #cfcfcf;
+  background-color: white;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 10px 50px;
+  gap: 40px;
+  position: relative;
+}
+
+.carousel1text,
+.carousel2text {
+  padding-top: 40px;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.blackicon1,
+.blackicon2 {
+  position: absolute;
+  top: -23px;
 }
 
 .eightpage {
