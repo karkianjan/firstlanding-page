@@ -58,13 +58,13 @@ body {
 }
 
 .secondnav li,
-.thirdnav li {
+.lastnav li {
   padding-left: 35px;
   list-style: none;
 }
 
 .secondnav a,
-.thirdnav a {
+#underline a {
   text-decoration: none;
   color: black;
 }
@@ -271,6 +271,10 @@ body {
     font-size: 40px;
     width: 440px;
   }
+  .secondnav ul {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 768px) {
@@ -301,12 +305,21 @@ body {
   .getstartedbutton {
     flex-direction: column;
   }
+  .secondnav ul {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 576px) {
   .firstpagebodyimage1 {
     display: none;
   }
+  .secondnav ul {
+    display: flex;
+    flex-direction: column;
+  }
+
   .container {
     max-width: 100%;
     padding: 0 15px;
@@ -1464,6 +1477,13 @@ body {
     grid-template-columns: 1fr;
     gap: 30px;
   }
+
+  .carousel1,
+  .carousel2 {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1477,6 +1497,15 @@ body {
   .seventhpagebody p:nth-child(2) {
     font-size: 12px;
   }
+  .carousel1,
+  .carousel2 {
+    padding: 10px;
+  }
+
+  .carousel1text,
+  .carousel2text {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1487,10 +1516,27 @@ body {
   .seventhpagebody p:nth-child(2) {
     font-size: 10px;
   }
+  .carousel1text,
+  .carousel2text {
+    font-size: 16px;
+    padding-top: 20px;
+  }
+
   .carousel {
-    display: grid;
-    grid-template-columns: 1fr;
-    flex-wrap: wrap;
+    padding-top: 20px;
+    gap: 20px;
+  }
+
+  .carousel1,
+  .carousel2 {
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .blackicon1,
+  .blackicon2 {
+    position: static;
+    margin-bottom: 10px;
   }
 }
 
@@ -1516,7 +1562,6 @@ body {
   font-weight: 400;
   line-height: 29px;
 }
-
 .carousel {
   display: grid;
   grid-template-columns: 1fr 0.8fr;
@@ -1524,7 +1569,8 @@ body {
   gap: 50px;
 }
 
-.carousel1 {
+.carousel1,
+.carousel2 {
   border: 1px solid #cfcfcf;
   background-color: white;
   border-radius: 10px;
@@ -1535,14 +1581,9 @@ body {
   position: relative;
   margin-left: 20%;
 }
+
 .carousel2 {
-  position: relative;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  border-radius: 10px;
-  border: 1px solid #cfcfcf;
-  background-color: white;
-  padding: 10px 50px;
+  margin-left: 10%;
 }
 
 .carousel1text,
@@ -2304,6 +2345,7 @@ body {
 
 #getstartednow {
   margin-top: 20px;
+  border: none;
 }
 
 #getstartednow a {
@@ -2312,13 +2354,13 @@ body {
   color: #ffffff;
   background-color: #ff7f50;
   padding: 15px 30px;
-  border-radius: 5px;
   font-size: 20px;
   font-weight: 700;
 }
 
 #getstartednow a:hover {
-  background-color: #ff6347;
+  background-color: white;
+  color: #000;
 }
 
 .elevenpageimage1 {
