@@ -1524,8 +1524,7 @@ body {
   gap: 50px;
 }
 
-.carousel1,
-.carousel2 {
+.carousel1 {
   border: 1px solid #cfcfcf;
   background-color: white;
   border-radius: 10px;
@@ -1534,6 +1533,16 @@ body {
   padding: 10px 50px;
   gap: 40px;
   position: relative;
+  margin-left: 20%;
+}
+.carousel2 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  border-radius: 10px;
+  border: 1px solid #cfcfcf;
+  background-color: white;
+  padding: 10px 50px;
 }
 
 .carousel1text,
@@ -1956,13 +1965,41 @@ body {
   grid-template-rows: repeat(5, 1fr);
   gap: 10px;
 }
-
-.tenpagegrid1 > div {
-  border-radius: 10px;
-  border: 1px solid #cfcfcf;
+.accordion-button {
   background-color: #ffffff;
-  position: relative;
-  padding: 20px;
+  color: #444;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  border: 1px solid #cfcfcf;
+  border-radius: 10px;
+  align-items: center;
+  text-align: left;
+  display: block;
+}
+.accordion-button p {
+  font-size: 22px;
+  font-weight: 800;
+}
+.accordion-button:after {
+  content: "+";
+  font-weight: bold;
+  display: flex;
+  justify-content: right;
+}
+
+.accordion-button.active:after {
+  content: "-";
+}
+
+.accordion-content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+}
+
+.accordion-content p {
+  margin: 10px 0;
 }
 
 .tenpagegrid2 {
@@ -1979,27 +2016,6 @@ body {
 .tenpagegrid2image1 {
   display: flex;
   align-items: center;
-}
-
-.tenpagegrid1 p:first-child {
-  font-size: 22px;
-  font-weight: 800;
-  line-height: 22px;
-  margin-bottom: 10px;
-}
-
-.tenpagegrid1 h4 {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 31px;
-  letter-spacing: -0.02em;
-}
-
-.tenpagegrid1 p:last-child {
-  text-align: right;
-  position: absolute;
-  bottom: 15px;
-  right: 20px;
 }
 
 .tenpagegrid2 p:nth-child(2) {
