@@ -62,6 +62,10 @@ body {
   padding-left: 35px;
   list-style: none;
 }
+.lastnav {
+  display: flex;
+  gap: 30px;
+}
 
 .secondnav a,
 #underline a {
